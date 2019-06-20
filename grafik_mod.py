@@ -1,0 +1,25 @@
+from tkinter import *
+fenetre = Tk()
+
+label = Label(fenetre, text="Hello World")
+label.pack()
+bouton=Button(fenetre, text="Fermer", command=fenetre.quit)
+bouton.pack()
+label = Label(fenetre, text="Texte par défaut", bg="yellow")
+label.pack()
+
+value = StringVar()
+value.set("texte par défaut")
+string = '0'
+entree = Entry(fenetre, textvariable=string, width=30)
+entree.pack()
+bouton = Checkbutton(fenetre, text="Nouveau?")
+bouton.pack()
+liste = Listbox(fenetre)
+liste.insert(1, "Python")
+liste.insert(2, "PHP")
+liste.insert(3, "jQuery")
+liste.insert(4, "CSS")
+liste.insert(5, "Javascript")
+liste.pack()
+fenetre.mainloop()
